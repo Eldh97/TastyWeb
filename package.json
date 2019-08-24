@@ -1,0 +1,36 @@
+{
+  "name": "prismic-next-blog",
+  "version": "1.0.0",
+  "description": "Guide code for building a simple blog that uses Prismic+Next+Now",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "deploy": "now",
+    "nodemon": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "micro-form": "^2.0.5",
+    "next": "^9.0.0",
+    "node-sass": "^4.12.0",
+    "nodemailer": "^6.3.0",
+    "prismic-javascript": "^2.1.1",
+    "prismic-reactjs": "^1.0.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-icons": "^3.7.0",
+    "styled-components": "^4.3.2",
+    "styled-jsx": "^3.2.1",
+    "typeface-nunito": "0.0.72",
+    "typeface-nunito-sans": "0.0.72"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.10.6",
+    "nodemon": "^1.19.1",
+    "now": "^15.5.0"
+  }
+}

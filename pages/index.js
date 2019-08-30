@@ -12,6 +12,7 @@ import Breadcrumb from "../components/Breadcrumb";
 import Router from "next/router";
 import CardSection from "../components/sections/CardSection";
 import Search from "../components/Search";
+import NProgress from "nprogress";
 const paths = {
   javascript: "javascript",
   react: "react",
@@ -35,6 +36,7 @@ const BlogHome = ({ home, latest, tags }) => {
             const data = await client.query([
               Prismic.Predicates.fulltext("document", term)
             ]);
+            NProgress.done();
             setPosts({ ...data });
             if (term) setIsSearch(true);
           }
@@ -46,9 +48,9 @@ const BlogHome = ({ home, latest, tags }) => {
       }}
     >
       {(isSearch && (
-        <Layout>
-          <CardSection posts={posts.results} />
-        </Layout>
+        <Layout >
+          <CardSection  posts={posts.results} />
+        </Layout >
       )) || (
         <Layout>
           <Hero />

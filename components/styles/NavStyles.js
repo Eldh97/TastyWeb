@@ -4,7 +4,7 @@ const NavStyles = styled.nav`
   display: inline-block;
   width: 46%;
   margin-left: 4rem;
-  color: ${props => props.theme.black};
+  color: ${props => props.theme.white};
   ul {
     list-style: none;
     display: inline-flex;

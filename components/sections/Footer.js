@@ -6,14 +6,13 @@ import Form from "../Form";
 const FooterStyles = styled.footer`
   min-height: 20vh;
   padding: 10rem 0 5rem 0;
-  background: ${props => props.theme.primaryColor};
   & > * {
     flex-basis: 50%;
   }
   ul {
     display: flex;
     justify-content: space-between;
-    color: ${props => props.theme.black};
+    color: ${props => props.theme.white};
     width: 80%;
     margin-left: 50%;
     transform: translateX(-50%);

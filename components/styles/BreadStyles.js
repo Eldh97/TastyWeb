@@ -5,7 +5,7 @@ const BreadStyles = styled.div`
     justify-content: center;
     align-items: center;
     height:4rem;
-    background-color: ${props => props.theme.lightblack};
+    background-color: ${props => props.theme.bodyColor};
     a {
         text-decoration:none;
         color: ${props => props.theme.white};

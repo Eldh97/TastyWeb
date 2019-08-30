@@ -1,12 +1,12 @@
-import React from "react"
-import styled from "styled-components"
+import React from "react";
+import styled from "styled-components";
 
 const HeroStyles = styled.section`
   text-align: center;
   margin-top: 10rem;
   color: ${props => props.theme.white};
   height: 30vh;
-  .heading-box {
+  div {
     text-align: center;
     h1 {
       font-weight: 400;
@@ -19,19 +19,19 @@ const HeroStyles = styled.section`
       font-size: 2.1rem;
     }
   }
-`
+`;
 
-const Hero = () => {
+const HeroSection = () => {
   return (
     <HeroStyles>
-      <div className="heading-box">
-        <h1 className="primary-heading">Tasty Wb Development</h1>
-        <h2 className="secondary-heading">
+      <div >
+        <h1>Tasty Web Development</h1>
+        <h2>
           Javascript, React, CSS, Node, Express...
         </h2>
       </div>
     </HeroStyles>
-  )
-}
+  );
+};
 
-export default Hero
+export default HeroSection;

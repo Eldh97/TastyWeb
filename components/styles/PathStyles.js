@@ -12,7 +12,7 @@ const PathStyles = styled.a`
   display: flex;
   align-items: center;
   text-align: center;
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   &,
   &:visited,
   &:focus {
@@ -21,7 +21,6 @@ const PathStyles = styled.a`
   }
 
   &:hover {
-    box-shadow: 0.2rem 0.3rem 2rem ${props => props.theme.shadow};
     transform: translateY(-0.8rem);
   }
 
@@ -32,6 +31,7 @@ const PathStyles = styled.a`
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left:-.1rem;
   }
   .icon {
     display: inline-block;

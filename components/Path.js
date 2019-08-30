@@ -4,6 +4,7 @@ import { DiReact, DiJavascript1 } from "react-icons/di";
 import { FaVuejs } from "react-icons/fa";
 import Link from "./Link";
 
+
 const renderedIcon = path => {
   if (path === "javascript") {
     return <DiJavascript1 className="icon icon--javascript" />;

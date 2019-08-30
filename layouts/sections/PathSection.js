@@ -1,37 +1,35 @@
 import React from "react";
 import styled from "styled-components";
-import Path from "../Path";
+import Path from "../../components/Path";
+
 const PathSectionStyles = styled.section`
-  height: 70vh;
-  width: 100%;
-  background-color: ${props => props.theme.lightblue};
+  position: relative;
+  width: 80%;
+  height: 50vh;
+  margin-left: 50%;
+  margin-top: 10rem;
+  transform: translateX(-50%);
+  margin-bottom: 10rem;
+  
+  border-radius: 1rem;
+  color: ${props => props.theme.white};
+
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  position: relative;
+  align-items: center;
 
-  color: ${props => props.theme.white};
-  .section__heading {
+  h3 {
     font-weight: 500;
     font-size: 3.4rem;
     font-style: italic;
   }
 `;
 
-const PathList = styled.div`
-  margin-top: 9rem;
-  width: 80%;
-  display: block;
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
 const PathSection = () => {
   return (
     <PathSectionStyles>
-      <h3 className="section__heading">What you want to learn ?</h3>
+      <h3>What you want to learn ?</h3>
       <PathList>
         <Path path="javascript" />
         <Path path="react" />

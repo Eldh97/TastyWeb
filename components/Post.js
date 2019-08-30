@@ -7,6 +7,8 @@ import PostStyles from "./styles/PostStyles";
 import Tags from "./Tags";
 import Link from "next/link";
 
+
+
 const Post = ({ post }) => {
   return (
     <Link

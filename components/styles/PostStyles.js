@@ -18,7 +18,7 @@ const PostStyles = styled.a`
   div {
     position: absolute;
     top:0;
-    left:0rem;
+    left:-.1rem;
     background-color: ${props => getColor(props.heading)};
     width:22%;
     height: 100%;

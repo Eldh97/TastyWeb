@@ -1,14 +1,14 @@
-import React from "react";
-import { createGlobalStyle, ThemeProvider } from "styled-components";
+import React, { useState, useEffect } from "react";
+import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import Header from "./Header";
 import Link from "./Link";
 import Breadcrumb from "./Breadcrumb";
 // require("typeface-nunito-sans")
-import Footer from './sections/Footer'
+import Footer from "./sections/Footer";
 // Global Variables
 const theme = {
-  primaryColor: "#5AEAB6",
-  secondaryColor:"#3687F4",
+  primaryColor: "#ff7fb0",
+  secondaryColor: "#FEE466",
   bodyColor: "#282C35",
   black: "#1d1d1d",
   lightblack: "#2d2d2d",
@@ -40,21 +40,23 @@ const GlobalStyle = createGlobalStyle`
         font-size:1.8rem;
         font-family: Nunito;
         
-        background-color: ${theme.lightblack};
+        background-color: ${theme.bodyColor};
     }
 
 `;
 
-const Layout = props => (
-  <ThemeProvider theme={theme}>
-    <div>
-      <Header />
-      <Breadcrumb />
-      {props.children}
-      <Footer/>
-      <GlobalStyle />
-    </div>
-  </ThemeProvider>
-);
+const Layout = props => {
+  return (
+    <ThemeProvider theme={theme}>
+      <div>
+        <Header />
+        <Breadcrumb />
+        {props.children}
+        {/* <Footer /> */}
+        <GlobalStyle />
+      </div>
+    </ThemeProvider>
+  );
+};
 
 export default Layout;

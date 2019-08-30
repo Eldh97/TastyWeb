@@ -31,7 +31,7 @@ const ArticleStyles = styled.article`
   hr {
     width: 100%;
     height: 0.5rem;
-    background-color: ${props => props.theme.lightblue};
+    background-color: ${props => props.theme.secondaryColor};
     border:none;
     margin: 4rem 0;
   }

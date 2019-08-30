@@ -8,9 +8,10 @@ function handleChange(term) {
   setTerm(term);
 }
 
-const Search = ({ stars }) => {
-  // Create a consumer for fetching data
+const Search = ({ stars}) => {
   const context = useContext(Context);
+
+  // Create a consumer for fetching data
   const [term, setTerm] = useState("");
   useEffect(() => {
     // context.toggleSearch();

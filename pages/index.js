@@ -47,7 +47,7 @@ const BlogHome = ({ home, latest, tags }) => {
       }}
     >
       {(isSearch && (
-        <Layout>
+        <Layout isSearch ={isSearch}>
           <CardSection posts={posts.results} />
         </Layout>
       )) || (

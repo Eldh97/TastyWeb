@@ -16,7 +16,7 @@ const renderedIcon = path => {
 
 const Path = props => {
   return (
-    <Link passHref href="/">
+    <Link passHref href={`/${props.path}`}>
       <PathStyles>
         <span className="icon-container">{renderedIcon(props.path)}</span>
         <span className="item-heading">{props.path}</span>

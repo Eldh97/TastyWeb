@@ -18,6 +18,8 @@ const PathStyles = styled.a`
   &:focus {
     text-decoration: none;
     color: ${props => props.theme.black};
+    outline:none;
+    border:none;
   }
 
   &:hover {

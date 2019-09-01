@@ -51,7 +51,7 @@ const PostSection = ({ heading, posts }) => {
     <PostSectionStyles>
       <PostHeading heading={heading}>{heading}</PostHeading>
       <PostList>{renderedPosts}</PostList>
-      <Link href="/">
+      <Link href={`/${heading}`}>
         <Read>
           <span>Read More</span>
         </Read>

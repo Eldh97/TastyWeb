@@ -62,9 +62,10 @@ const GlobalStyle = createGlobalStyle`
 const Layout = props => {
   return (
     <ThemeProvider theme={theme}>
+      
       <div>
-        <Header />
-        <Breadcrumb />
+        <Header isSearch={props.isSearch} />
+        {/* <Breadcrumb /> */}
         {props.children}
         {/* <Footer /> */}
         <GlobalStyle />

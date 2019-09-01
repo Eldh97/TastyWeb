@@ -19,6 +19,10 @@ const SearchStyles = styled.form`
     &:active {
       outline: none;
     }
+    @media(max-width: 57.25em) {
+      display:none;
+    }
+
   }
  
   .search-icon {
@@ -36,6 +40,10 @@ const SearchStyles = styled.form`
       border: none;
     
   }
+  @media(max-width: 57.25em) {
+      height:2.3rem;
+      width:2.3rem;
+    }
   }
 `;
 export default SearchStyles;

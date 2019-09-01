@@ -1,7 +1,9 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-import Card from "../Card";
+import Card from "../../components/Card";
 import { Context } from "../../pages/index";
+import CardList from "../lists/CardList";
+import Heading from "../../components/Heading";
 
 // Styling
 const CardSectionStyles = styled.section`
@@ -11,7 +13,7 @@ const CardSectionStyles = styled.section`
   color: ${props => props.theme.primaryColor};
 `;
 
-// Concel Search Button Styling 
+// Concel Search Button Styling
 const ConcelSearch = styled.button`
   padding: 1rem 2rem;
   border-radius: 10rem;
@@ -26,10 +28,12 @@ const ConcelSearch = styled.button`
   margin-bottom: 3rem;
 `;
 
-
-const CardSection = () => {
+const CardSection = ({ posts }) => {
   const context = useContext(Context);
 
+  const renderedCards = posts.map(post => {
+    return <Card key={post.id} post={post} />;
+  });
   return (
     <CardSectionStyles>
       <ConcelSearch onClick={() => context.concelSearch()}>

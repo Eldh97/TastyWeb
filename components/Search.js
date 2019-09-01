@@ -8,20 +8,23 @@ function handleChange(term) {
   setTerm(term);
 }
 
-const Search = ({ stars}) => {
+const Search = ({ stars }) => {
+  const [term, setTerm] = useState("");
+
   const context = useContext(Context);
 
-  // Create a consumer for fetching data
-  const [term, setTerm] = useState("");
-  useEffect(() => {
-    // context.toggleSearch();
-  }, []);
+  // Handlers
+
+  const handleSubmit = evt => {
+    evt.preventDefault();
+    context.getTerm(term);
+    setTerm("");
+  };
+
   return (
     <SearchStyles
       onSubmit={evt => {
-        evt.preventDefault();
-        context.getTerm(term);
-        setTerm(" ");
+        handleSubmit(evt);
       }}
     >
       <input
@@ -30,10 +33,9 @@ const Search = ({ stars}) => {
         }}
         placeholder="e.g. react"
         type="text"
-        value ={term}
-
+        value={term}
       />
-      <FaSearch className="search-icon" />
+        <FaSearch className="search-icon" />
     </SearchStyles>
   );
 };

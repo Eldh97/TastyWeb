@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-import HeaderStyles from "./styles/HeaderStyles";
 import styled from "styled-components";
-import { FaSearch } from "react-icons/fa";
-import Breadcrumb from "./Breadcrumb";
+import HeaderStyles from "./styles/HeaderStyles";
 import Search from "./Search";
 import Logo from "./Logo";
 import Nav from "./Nav";

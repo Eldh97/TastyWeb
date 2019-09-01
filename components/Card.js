@@ -1,17 +1,11 @@
 import React from "react";
-import CardStyles from "./styles/CardStyle";
-import Link from "next/link";
-import Read from "./Read";
-import { IoMdPricetag, IoIosTime } from "react-icons/io";
 import styled from "styled-components";
+import { IoIosTime } from "react-icons/io";
 import { client, linkResolver, hrefResolver } from "../prismic-configuration";
-// import { IoIosArrowRoundForward } from "react-icons/io";
-const StyledTag = styled(IoMdPricetag)`
-  color: #f34f97;
-  width: 4rem;
-  height: 4rem;
-  margin-right: 2rem;
-`;
+import Link from "next/link";
+import CardStyles from "./styles/CardStyle";
+import Read from "./Read";
+
 const StyledDate = styled(IoIosTime)`
   color: ${props => props.theme.white};
 
@@ -19,6 +13,8 @@ const StyledDate = styled(IoIosTime)`
 `;
 
 const Card = ({ post }) => {
+  // Regular Expression for removing the -
+  const reg = new RegExp("\\-", "g");
 
   return (
     <Link
@@ -33,7 +29,7 @@ const Card = ({ post }) => {
           <StyledDate />
           <span>19 Aug, 2019</span>
         </div>
-        <h2>{post.uid.replace(new RegExp("\\-", "g"), " ")}</h2>
+        <h2>{post.uid.replace(reg, " ")}</h2>
       </CardStyles>
     </Link>
   );

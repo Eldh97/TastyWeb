@@ -10,16 +10,22 @@ const LogoStyles = styled.a`
   font-weight: 500;
   color: ${props => props.theme.white};
 `;
+
 function Logo() {
+  // Consuming Context 
   const context = useContext(Context);
+
+  // Handlers 
+  const toHomePage = () => {
+    if (context != undefined) {
+      context.concelSearch();
+    }
+  };
+
 
   return (
     <Link passHref href="/">
-      <LogoStyles
-        onClick={() => (context != undefined ? context.concelSearch() : "")}
-      >
-        TastyWeb
-      </LogoStyles>
+      <LogoStyles onClick={() => toHomePage()}>TastyWeb</LogoStyles>
     </Link>
   );
 }

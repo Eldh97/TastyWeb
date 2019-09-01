@@ -2,7 +2,7 @@ import React from "react";
 import Link from "../Link";
 import styled from "styled-components";
 import Logo from "../Logo";
-import Form from "../Form";
+import Form from "../Email";
 const FooterStyles = styled.footer`
   min-height: 20vh;
   padding: 10rem 0 5rem 0;

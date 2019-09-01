@@ -13,6 +13,7 @@ const renderedIcon = path => {
   }
   return <FaVuejs className="icon icon--vue" />;
 };
+
 const Path = props => {
   return (
     <Link passHref href="/">

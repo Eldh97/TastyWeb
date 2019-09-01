@@ -1,18 +1,18 @@
 import React, { useState, createContext, useEffect } from "react";
+import styled from "styled-components";
+import Router from "next/router";
 import Prismic from "prismic-javascript";
 import { RichText, Date } from "prismic-reactjs";
 import { client, linkResolver, hrefResolver } from "../prismic-configuration";
-import styled from "styled-components";
-import Layout from "../components/Layout";
-import Hero from "../components/sections/Hero";
-import PathSection from "../components/sections/PathSection";
-import Latest from "../components/sections/Latest";
-import PostSection from "../components/sections/PostSection";
 import Breadcrumb from "../components/Breadcrumb";
-import Router from "next/router";
-import CardSection from "../components/sections/CardSection";
 import Search from "../components/Search";
-import NProgress from "nprogress";
+import Layout from "../layouts/Layout";
+import Hero from "../layouts/sections/HeroSection";
+import PathSection from "../layouts/sections/PathSection";
+import Latest from "../layouts/sections/LatestSection";
+import PostSection from "../layouts/sections/PostSection";
+import CardSection from "../layouts/sections/CardSection";
+
 const paths = {
   javascript: "javascript",
   react: "react",
@@ -31,12 +31,11 @@ const BlogHome = ({ home, latest, tags }) => {
       value={{
         getTerm: async term => {
           const letters = /^[A-Za-z]+$/;
-
+          
           if (term.match(letters)) {
             const data = await client.query([
               Prismic.Predicates.fulltext("document", term)
             ]);
-            NProgress.done();
             setPosts({ ...data });
             if (term) setIsSearch(true);
           }
@@ -48,9 +47,9 @@ const BlogHome = ({ home, latest, tags }) => {
       }}
     >
       {(isSearch && (
-        <Layout >
-          <CardSection  posts={posts.results} />
-        </Layout >
+        <Layout>
+          <CardSection posts={posts.results} />
+        </Layout>
       )) || (
         <Layout>
           <Hero />

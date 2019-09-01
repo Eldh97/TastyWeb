@@ -2,10 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 const HeroStyles = styled.section`
-  text-align: center;
+  min-height: 30vh;
   margin-top: 10rem;
+  text-align: center;
   color: ${props => props.theme.white};
-  height: 30vh;
+
   div {
     text-align: center;
     h1 {
@@ -24,11 +25,9 @@ const HeroStyles = styled.section`
 const HeroSection = () => {
   return (
     <HeroStyles>
-      <div >
+      <div>
         <h1>Tasty Web Development</h1>
-        <h2>
-          Javascript, React, CSS, Node, Express...
-        </h2>
+        <h2>Javascript, React, CSS, Node, Express...</h2>
       </div>
     </HeroStyles>
   );

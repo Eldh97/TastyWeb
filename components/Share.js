@@ -2,8 +2,10 @@ import React from "react";
 import { IoLogoTwitter, IoIosLink } from "react-icons/io";
 import styled from "styled-components";
 import Link from "next/link";
+
 const ShareStyles = styled.article`
   width: 10rem;
+
   span {
     color: ${props => props.theme.white};
     display: block;
@@ -12,11 +14,13 @@ const ShareStyles = styled.article`
     font-weight: 400;
     font-style: italic;
   }
+
   div {
     width: 44%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     & > * {
       color: ${props => props.theme.primaryColor};
       flex-basis: 40%;
@@ -30,10 +34,14 @@ const Share = () => {
       <span>Share</span>
       <div>
         <Link href="/">
-          <a><IoLogoTwitter /></a>
+          <a>
+            <IoLogoTwitter />
+          </a>
         </Link>
         <Link href="/">
-          <a><IoIosLink /></a>
+          <a>
+            <IoIosLink />
+          </a>
         </Link>
       </div>
     </ShareStyles>

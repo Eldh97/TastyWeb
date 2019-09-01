@@ -1,17 +1,14 @@
 import React, { useContext, useState, useEffect } from "react";
-import Layout from "../../components/Layout";
 import styled from "styled-components";
+import Layout from "../../layouts/Layout";
 import Sidebar from "../../components/Sidebar";
+
 export const Tools = styled.section`
   display: flex;
   height: 100vh;
   padding: 10rem;
-  /* background-color: ${props => props.theme.black}; */
-
-  & > * {
-    /* flex-basis: 50%; */
-  }
 `;
+
 export const Content = styled.main`
   flex: 1;
   color: ${props => props.theme.white};
@@ -25,7 +22,6 @@ export const Content = styled.main`
 `;
 
 const tools = () => {
-  
   return (
     <Layout>
       <Tools>

@@ -1,16 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import Path from "../../components/Path";
+import PathList from "../lists/PathList";
+
+
 
 const PathSectionStyles = styled.section`
   position: relative;
-  width: 80%;
-  height: 50vh;
-  margin-left: 50%;
-  margin-top: 10rem;
-  transform: translateX(-50%);
+  width: 100%;
+  min-height: 50vh;
+  margin-top: 20rem;
   margin-bottom: 10rem;
-  
+
   border-radius: 1rem;
   color: ${props => props.theme.white};
 

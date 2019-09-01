@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
-import Header from "./Header";
-import Link from "./Link";
-import Breadcrumb from "./Breadcrumb";
-// require("typeface-nunito-sans")
-import Footer from "./sections/Footer";
+import Header from "../components/Header";
+import Link from "../components/Link";
+import Breadcrumb from "../components/Breadcrumb";
+import Footer from "./Footer";
+
 // Global Variables
 const theme = {
   primaryColor: "#ff7fb0",
@@ -33,6 +33,20 @@ const GlobalStyle = createGlobalStyle`
     }
     html {
         font-size: 62.5%;
+
+      @media  (max-width: 57.25em) {
+        font-size:50.25%;
+      } 
+      @media (max-width: 45em) {
+        font-size:56.25%;
+      }
+      @media  (max-width:31.57em) {
+        font-size: 48%;
+      } 
+      @media (max-width: 23.56em) {
+        font-size: 38%;
+      } 
+
     }
     
     body {

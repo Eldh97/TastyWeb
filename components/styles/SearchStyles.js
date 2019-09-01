@@ -20,6 +20,7 @@ const SearchStyles = styled.form`
       outline: none;
     }
   }
+ 
   .search-icon {
     color: grey;
     position: absolute;
@@ -27,6 +28,14 @@ const SearchStyles = styled.form`
     top: 50%;
     transform: translateY(-50%);
     width: 1.6rem;
+    background:none;
+    &,
+    &:focus,
+    &:visited {
+      outline:none;
+      border: none;
+    
+  }
   }
 `;
 export default SearchStyles;

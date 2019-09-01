@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import Router from "next/router";
 import styled from "styled-components";
+import Router from "next/router";
+import Link from "next/link";
 import {
   DiVisualstudio,
   DiTerminal,
@@ -11,53 +11,49 @@ import {
 import { FaTwitter } from "react-icons/fa";
 
 const SidebarStyles = styled.nav`
-  /* background-color: ${props => props.theme.black}; */
-  height: 100%;
   flex-basis: 25%;
+  height: 100%;
   padding: 4rem 5rem;
-  /* border-right: .4rem solid ${props => props.theme.primaryColor}; */
-  color:${props => props.theme.primaryColor};
-  overflow:auto;
-  border-radius:2rem;
-    border: 1rem solid ${props => props.theme.secondaryColor};
+  border: 1rem solid ${props => props.theme.secondaryColor};
+  border-radius: 2rem;
+  overflow: auto;
+  color: ${props => props.theme.primaryColor};
+
   div {
-      text-align:center;
-      margin-bottom:8rem;
+    margin-bottom: 8rem;
+    text-align: center;
   }
+
   img {
-      border-radius:50rem;
-      border-radius:50rem;
-      height: 100%;      
-    
+    height: 100%;
+    border-radius: 50rem;
   }
+
   ul {
+    display: flex;
+    flex-direction: column;
     list-style: none;
-    display:flex;
-    flex-direction:column;
-    /* height:100%; */
-    /* border:1px solid green; */
-    
   }
+
   li {
-       
-       margin-bottom:5rem;
+    margin-bottom: 5rem;
     cursor: pointer;
+
     .icon {
-        font-size:2.8rem;
-        margin-right:1rem;
+      font-size: 2.8rem;
+      margin-right: 1rem;
     }
-    }
+  }
 
   a {
-    color:inherit;
+    font-weight: 400;
     text-decoration: none;
-    font-weight:400;
-    display:flex;
-    flex-direction:row;
-    /* justify-content:space-between; */
-    align-items:center;
+    color: inherit;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
   }
-  
 `;
 
 const Sidebar = ({ getTool }) => {

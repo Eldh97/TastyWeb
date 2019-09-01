@@ -1,3 +1,5 @@
+import styled from "styled-components";
+
 const Heading = styled.h2`
   border-bottom: 0.5rem solid ${props => props.theme.secondaryColor};
   padding-bottom: 1rem;
@@ -8,4 +10,8 @@ const Heading = styled.h2`
   transform: translateX(-50%);
   text-transform: capitalize;
 `;
+export const PostHeading = styled(Heading)`
+ 
+`;
+
 export default Heading;

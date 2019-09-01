@@ -10,7 +10,7 @@ const ProgressStyles = styled.div`
     transparent 0
   );
   width: 100%;
-  height: 8px;
+  height: .8rem;
   z-index: 3;
   top: 0;
   left: 0;

@@ -4,7 +4,7 @@
 * Integerating Prismic CMS with Next.js 
 * CSS in JS: styled components, styled-jsx 
 * React Hooks, Context API
-### Instruction
+### Instructions
 ```
 npm install
 ```

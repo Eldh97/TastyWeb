@@ -8,6 +8,7 @@ const LogoStyles = styled.a`
   font-size: 2.5rem;
   text-decoration: none;
   font-weight: 500;
+  margin-left:2rem;
   color: ${props => props.theme.white};
   @media (max-width: 57.25em) {
     display: none;

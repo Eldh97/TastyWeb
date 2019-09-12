@@ -6,12 +6,12 @@ import { MdClose } from "react-icons/md";
 import { Context } from "../pages/index";
 
 const LogoStyles = styled.a`
-  display: none;
+  display: none; 
   font-size: 2.5rem;
   text-decoration: none;
   font-weight: 500;
   color: ${props => props.theme.white};
-  margin-left: 50%;
+  margin-left: 46%;
   transform: translateX(-50%);
   @media (max-width: 57.25em) {
     display: inline-block;
@@ -37,6 +37,8 @@ function Logo() {
   );
 }
 const Nav = styled.nav`
+  margin-left:2rem;
+
   display: none;
   /* height:100rem;
   width:10rem; */
@@ -65,7 +67,7 @@ const Menu = styled.div`
 `;
 const List = styled.ul`
   list-style: none;
-  margin-top: 3rem;
+  margin-top: 13rem;
   margin-left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -127,10 +129,10 @@ const NavMobile = () => {
   const [isClick, setIsClick] = useState(false);
   const handleClick = () => {};
   return (
-    <Nav onClick={() => setIsClick(isClick => !isClick)}>
+    <Nav>
       {isClick ? (
         <>
-          <Close />
+          <Close onClick={() => setIsClick(isClick => !isClick)}/>
           <Menu>
             <List>
               <li>
@@ -149,7 +151,7 @@ const NavMobile = () => {
         </>
       ) : (
         <>
-          <Icon />
+          <Icon onClick={() => setIsClick(isClick => !isClick)} />
           <Logo />
         </>
       )}

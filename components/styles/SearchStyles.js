@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 const SearchStyles = styled.form`
+  margin-right:2rem;
+
   display: inline-block;
   margin-left: auto;
   position: relative;

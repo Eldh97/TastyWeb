@@ -11,7 +11,7 @@ const LogoStyles = styled.a`
   text-decoration: none;
   font-weight: 500;
   color: ${props => props.theme.white};
-  margin-left: 46%;
+  margin-left: 44%;
   transform: translateX(-50%);
   @media (max-width: 57.25em) {
     display: inline-block;
@@ -86,10 +86,10 @@ const List = styled.ul`
       text-decoration: none;
       text-transform: uppercase;
       background-image: linear-gradient(
-        120deg,
+        90deg,
         transparent 0%,
         transparent 50%,
-        #fee466 50%
+        #fee466 40%
       );
       background-size: 220%;
       transition: all 0.4s;

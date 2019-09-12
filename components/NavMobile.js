@@ -11,7 +11,7 @@ const LogoStyles = styled.a`
   text-decoration: none;
   font-weight: 500;
   color: ${props => props.theme.white};
-  margin-left: 44%;
+  margin-left: 42%;
   transform: translateX(-50%);
   @media (max-width: 57.25em) {
     display: inline-block;

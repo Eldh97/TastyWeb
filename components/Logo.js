@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-import Link from "./link";
+import Link from "./Link";
 import { Context } from "../pages/index";
 
 const LogoStyles = styled.a`

@@ -4,12 +4,15 @@ import Link from "./Link";
 import { Context } from "../pages/index";
 
 const LogoStyles = styled.a`
-  /* display: inline-block; */
-  display:none;
+  display: inline-block;
   font-size: 2.5rem;
   text-decoration: none;
   font-weight: 500;
   color: ${props => props.theme.white};
+  @media (max-width: 57.25em) {
+    display: none;
+    color: ${props => props.theme.black};
+  }
 `;
 
 function Logo() {

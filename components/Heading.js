@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 const Heading = styled.h2`
   border-bottom: 0.5rem solid ${props => props.theme.secondaryColor};
   padding-bottom: 1rem;

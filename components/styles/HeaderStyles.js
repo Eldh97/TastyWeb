@@ -4,6 +4,7 @@ const HeaderStyles = styled.header`
   display: flex;
   height: 7rem;
   align-items: center;
+  justify-content:space-between;
   position: relative;
   z-index: 12;
   width:100%;

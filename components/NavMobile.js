@@ -1,14 +1,56 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { IoMdMenu } from "react-icons/io";
 import styled from "styled-components";
 import Link from "./Link";
 import { MdClose } from "react-icons/md";
+import { Context } from "../pages/index";
+
+const LogoStyles = styled.a`
+  display: none;
+  font-size: 2.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  color: ${props => props.theme.white};
+  margin-left: 50%;
+  transform: translateX(-50%);
+  @media (max-width: 57.25em) {
+    display: inline-block;
+    color: ${props => props.theme.black};
+  }
+`;
+
+function Logo() {
+  // Consuming Context
+  const context = useContext(Context);
+
+  // Handlers
+  const toHomePage = () => {
+    if (context != undefined) {
+      context.concelSearch();
+    }
+  };
+
+  return (
+    <Link passHref href="/">
+      <LogoStyles onClick={() => toHomePage()}>TastyWeb</LogoStyles>
+    </Link>
+  );
+}
 const Nav = styled.nav`
-  display: inline-block;
+  display: none;
   /* height:100rem;
   width:10rem; */
   position: relative;
   z-index: 100;
+
+  @media (max-width: 57.25em) {
+    display: inline-block;
+    flex: 1;
+    display: flex;
+
+    align-items: center;
+    color: ${props => props.theme.black};
+  }
 `;
 const Menu = styled.div`
   display: block;
@@ -45,7 +87,7 @@ const List = styled.ul`
         120deg,
         transparent 0%,
         transparent 50%,
-        #FEE466 50%
+        #fee466 50%
       );
       background-size: 220%;
       transition: all 0.4s;
@@ -65,14 +107,20 @@ const List = styled.ul`
   }
 `;
 const Icon = styled(IoMdMenu)`
-  color: ${props => props.theme.black};
+  color: ${props => props.theme.white};
   width: 3rem;
   height: 3rem;
+  @media (max-width: 57.25em) {
+    color: ${props => props.theme.black};
+  }
 `;
 const Close = styled(MdClose)`
+  color: ${props => props.theme.white};
   width: 3rem;
   height: 3rem;
-  color: ${props => props.theme.black};
+  @media (max-width: 57.25em) {
+    color: ${props => props.theme.black};
+  }
 `;
 
 const NavMobile = () => {
@@ -97,9 +145,13 @@ const NavMobile = () => {
               </li>
             </List>
           </Menu>
+          <Logo />
         </>
       ) : (
-        <Icon />
+        <>
+          <Icon />
+          <Logo />
+        </>
       )}
     </Nav>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { TiFlash } from "react-icons/ti";
 
 const HeroStyles = styled.section`
   min-height: 30vh;
@@ -22,12 +23,25 @@ const HeroStyles = styled.section`
   }
 `;
 
+const FlashIcon = styled(TiFlash)`
+  color: ${props => props.theme.secondaryColor};
+  display: inline-block;
+  margin-left: 1rem;
+  transform: translateY(20%);
+  width: 3rem;
+  height: 3rem;
+`;
 const HeroSection = () => {
   return (
     <HeroStyles>
       <div>
         <h1>Tasty Web Development</h1>
-        <h2>Javascript, React, CSS, Node, Express...</h2>
+        <h2>
+          <span>Javascript, React, CSS, Node, Express</span>
+          <span>
+            <FlashIcon />
+          </span>
+        </h2>
       </div>
     </HeroStyles>
   );

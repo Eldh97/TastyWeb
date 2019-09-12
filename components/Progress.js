@@ -11,9 +11,15 @@ const ProgressStyles = styled.div`
   );
   width: 100%;
   height: .8rem;
-  z-index: 3;
+  z-index: 3000;
   top: 0;
   left: 0;
+  @media (max-width: 57.25em) {
+    background: linear-gradient(
+    to right,
+    ${props => props.theme.secondaryColor} ${props => props.scroll},
+    transparent 0
+  );  }
 `;
 
 const Progress = () => {

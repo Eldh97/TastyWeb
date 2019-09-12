@@ -29,8 +29,8 @@ const SearchIcon = styled(FaSearch)`
   right: 4%;
   top: 50%;
   transform: translateY(-50%);
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.2rem;
+  height: 2.2rem;
   background: none;
   color: ${props => props.theme.black};
   @media (max-width: 57.25em) {

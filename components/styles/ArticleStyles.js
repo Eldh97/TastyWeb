@@ -7,6 +7,10 @@ const ArticleStyles = styled.article`
   padding-bottom: 3rem;
   margin-top: 10rem;
   color: ${props => props.theme.white};
+  @media (max-width: 57.25em) {
+    width: 65%;
+
+  }
   img {
     width: 80%;
     display: block;

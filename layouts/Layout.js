@@ -67,7 +67,7 @@ const Layout = props => {
         <Header isSearch={props.isSearch} />
         {/* <Breadcrumb /> */}
         {props.children}
-        {/* <Footer /> */}
+        <Footer />
         <GlobalStyle />
       </div>
     </ThemeProvider>

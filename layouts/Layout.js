@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
+import Footer from "./Footer";
 import Header from "../components/Header";
 import Link from "../components/Link";
-import Breadcrumb from "../components/Breadcrumb";
-import Footer from "./Footer";
 
 // Global Variables
 const theme = {

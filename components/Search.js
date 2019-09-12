@@ -19,6 +19,8 @@ const Close = styled(MdClose)`
   color: ${props => props.theme.black};
   width: 3.5rem;
   height: 3.5rem;
+  z-index:8000;
+
   @media (max-width: 57.25em) {
     display: inline-block;
   }
@@ -32,6 +34,7 @@ const SearchIcon = styled(FaSearch)`
   width: 2.2rem;
   height: 2.2rem;
   background: none;
+  z-index:8000;
   color: ${props => props.theme.black};
   @media (max-width: 57.25em) {
     display: inline-block;
@@ -57,7 +60,6 @@ const MobileSearch = styled.div`
     position: relative;
   }
   input {
-
     color: grey;
     border-radius: 0.2rem;
     background-color: ${props => props.theme.black};
@@ -85,12 +87,11 @@ const MobileSearch = styled.div`
       outline: none;
       border: none;
     }
-
-
+  }
 `;
-const Search = ({ stars }) => {
+const Search = () => {
   const [term, setTerm] = useState("");
-  const [isClick, setIsClick] = useState(true);
+  const [isClick, setIsClick] = useState(false);
 
   const context = useContext(Context);
 
@@ -122,11 +123,11 @@ const Search = ({ stars }) => {
         />
         <FaSearch className="search-icon" />
       </SearchStyles>
-      {isClick ? (
-        <SearchIcon onClick={handleIconClick} />
+      {!isClick ? (
+          <SearchIcon onClick={() => setIsClick(isClick => !isClick)} />
       ) : (
         <>
-          <Close onClick={handleIconClick} />
+          <Close onClick={() => setIsClick(isClick => !isClick)} />
           <MobileSearch>
             <form
               onSubmit={evt => {

@@ -6,7 +6,10 @@ const SearchStyles = styled.form`
   position: relative;
   height: 3.6rem;
   width: 16%;
-
+  z-index: 3;
+  @media (max-width: 57.25em) {
+    display: none;
+  }
   input {
     color: grey;
     border-radius: 0.2rem;
@@ -19,12 +22,8 @@ const SearchStyles = styled.form`
     &:active {
       outline: none;
     }
-    @media(max-width: 57.25em) {
-      display:none;
-    }
-
   }
- 
+
   .search-icon {
     color: grey;
     position: absolute;
@@ -32,18 +31,14 @@ const SearchStyles = styled.form`
     top: 50%;
     transform: translateY(-50%);
     width: 1.6rem;
-    background:none;
+    background: none;
     &,
     &:focus,
     &:visited {
-      outline:none;
+      outline: none;
       border: none;
-    
-  }
-  @media(max-width: 57.25em) {
-      height:2.3rem;
-      width:2.3rem;
     }
+
   }
 `;
 export default SearchStyles;

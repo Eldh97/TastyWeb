@@ -1,3 +1,0 @@
-
-
-// Styling All Icons

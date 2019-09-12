@@ -7,6 +7,7 @@ const StyledLink = styled(Link)`
   &:focus {
     text-decoration: none;
   }
+  
   color: red;
 `;
 export default StyledLink;

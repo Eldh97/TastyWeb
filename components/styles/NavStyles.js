@@ -1,7 +1,8 @@
 import styled from "styled-components"
 
 const NavStyles = styled.nav`
-  display: inline-block;
+  display:none;
+  /* display: inline-block; */
   width: 46%;
   margin-left: 4rem;
   color: ${props => props.theme.white};

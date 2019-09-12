@@ -2,7 +2,7 @@
   "name": "prismic-next-blog",
   "version": "1.0.0",
   "engines": {
-    "node": "12.3.0"
+    "node": "10.x"
   },
   "description": "Guide code for building a simple blog that uses Prismic+Next+Now",
   "main": "index.js",

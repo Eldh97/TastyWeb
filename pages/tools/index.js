@@ -25,7 +25,6 @@ export const Content = styled.main`
 
 const Heading = styled.h2`
   text-align: center;
-  border:1px solid red;
 `;
 
 const tools = () => {

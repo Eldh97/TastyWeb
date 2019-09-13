@@ -7,6 +7,8 @@ export const Tools = styled.section`
   display: flex;
   height: 100vh;
   padding: 10rem;
+  text-align: center;
+  color: ${props => props.theme.white};
 `;
 
 export const Content = styled.main`
@@ -21,14 +23,20 @@ export const Content = styled.main`
   }
 `;
 
+const Heading = styled.h2`
+  text-align: center;
+  border:1px solid red;
+`;
+
 const tools = () => {
   return (
     <Layout>
       <Tools>
-        <Sidebar />
+        <Heading>Soon :)</Heading>
+        {/* <Sidebar />
         <Content>
           <h1>VS Code Tools</h1>
-        </Content>
+        </Content> */}
       </Tools>
     </Layout>
   );

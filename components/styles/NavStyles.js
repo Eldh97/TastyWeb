@@ -1,11 +1,14 @@
 import styled from "styled-components"
 
 const NavStyles = styled.nav`
-  display:none;
+  display:inline-block;
   /* display: inline-block; */
   width: 46%;
   margin-left: 4rem;
   color: ${props => props.theme.white};
+  @media (max-width: 57.25em) {
+    display: none;
+  }
   ul {
     list-style: none;
     display: inline-flex;

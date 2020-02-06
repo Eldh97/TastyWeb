@@ -10,7 +10,7 @@ import Heading from "../components/Heading";
 import { Next, Prev, BtnContainer } from "../components/Pagination";
 
 const Tutorials = styled.section`
-  min-height: 60vh;
+  min-height: 100vh;
   justify-content: center;
   padding: 13rem 0;
   text-align: left;

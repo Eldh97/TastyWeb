@@ -38,10 +38,7 @@ function Logo() {
 }
 const Nav = styled.nav`
   margin-left:2rem;
-
   display: none;
-  /* height:100rem;
-  width:10rem; */
   position: relative;
   z-index: 100;
 
